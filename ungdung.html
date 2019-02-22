@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <strong> caculator </strong>
+    <table border=0px cellspacing="0px" width="50%">
+        <tr><td colspan="2"><input type="number" id="nhập số thứ 1"></td>
+            <td colspan="2"><input type="number" id="nhập số thứ 2"> </td>
+        </tr>
+
+        <tr>
+            <td><input   value="addition(+)" type="button" id="addition(+)"onclick=" addition()"></td>
+            <td><input   value="subtraction(-)" type="button" id="subtraction(-)" onclick=" subtraction()"> </td>
+            <td><input   value="multiplication(X)" type="button" id="multiplication(X)" onclick=" multiplication()"></td>
+            <td><input  value="division(/)" type="button" id="division(/)"onclick="division()"> </td>
+        </tr>
+
+    </table>
+    <p> kết quả phép tính: <span id="kq"> </span> </p>
+    <script>
+        function addition(){
+            let x=parseInt(document.getElementById("nhập số thứ 1").value);
+            let y=parseInt(document.getElementById("nhập số thứ 2").value);
+            document.getElementById("kq").innerHTML = x+y ;
+        }
+        function subtraction() {
+            let x=parseInt(document.getElementById("nhập số thứ 1").value);
+            let y=parseInt(document.getElementById("nhập số thứ 2").value);
+            document.getElementById("kq").innerHTML = x-y ;
+
+        }
+        function multiplication() {
+            let x=parseInt(document.getElementById("nhập số thứ 1").value);
+            let y=parseInt(document.getElementById("nhập số thứ 2").value);
+            document.getElementById("kq").innerHTML = x*y ;
+        }
+        function division() {
+            let x=parseInt(document.getElementById("nhập số thứ 1").value);
+            let y=parseInt(document.getElementById("nhập số thứ 2").value);
+            document.getElementById("kq").innerHTML = x/y ;
+        }
+
+    </script>
+</form>
+</body>
+</html>
